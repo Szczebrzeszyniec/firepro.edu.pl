@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>FirePro</title>
+    <link id="style" rel="stylesheet"  href="/newhomev6/home2/css/style4by3.css">
+    <link id="style" rel="stylesheet"  href="/newhomev6/home2/css/styleWin.css">
+    <link id="style" rel="stylesheet"  href="/newhomev6/home2/css/styleSet.css">
+    <link id="style" rel="stylesheet"  href="/newhomev6/home2/css/styleExtra.css">
+    <link rel="icon" type="image/x-icon" href="/newhomev2/images/fajer.svg">
+</head>
+
+<body>
+    <div class="startmv">
+
+        <img id="startmvgif" src="/newhomev6/home2/assets/winxpboot.gif">
+
+    </div>
+    <div class="desktop">
+        <div class="freespace">
+            <a class="vertext">wersja 0.8.1 październik 2025</a>
+            <div class="setwindow hidden">
+                <div class="settbar">
+                    <a id="tbarnameset">ustawienia</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="maxset()">☐</a> -->
+                        <a class="winctrl" onclick="closeset()">✕</a>
+                    </div>
+
+                </div>
+                    <div class="setMain">
+                        <div class="setSide">
+                            <button onclick="toglSety('tapeta')">Personalizacja</button>
+                            <button onclick="toglSety('ekran')">Ekran</button>
+                            <button onclick="toglSety('inne')">Inne</button>
+                            <button onclick="toglSety('info')">Informacje</button>
+
+                        </div>
+
+                        <div class="setOtherSide">
+                            <div class="setWallsy hidden">
+                        <!-- <img class="setWalBtn" src="/newhomev6/home2/wall/winxp-bliss.webp"> -->
+                            </div>
+
+                            <div class="setEkran hidden">
+
+
+                                 <div class="setEkranOpt">
+                                <div onclick="setDisplay('4by3')" id="opt4by3">
+4:3
+                                </div>
+                                <div onclick="setDisplay('16by9')" id="opt16by9">
+16:9
+                                </div>
+                                 </div>
+                            </div>
+
+                            <div class="setInne hidden">
+                            <button class="debugBtn" onclick="toglDebug()">błądzik jest szefie</button><br>
+                            <button class="smvpbtn" onclick="toglsmvp()">Film startowy: błąd :(</button><br>
+                            <button class="serPrefBtn" onclick="toglSerPref()">Auto Staty: błąd :(</button><br>
+                            <br>
+                            <br>
+                            <button onclick="userLogin()">Zaloguj</button> 
+                            <button class="fnetLogoutBtn hidden" onclick="fnetLogout()">Wyloguj</button> 
+                            <br>
+                            <br>
+                            <button onclick="openlink('https://firepro.edu.pl/archive/home2_v0.6.7_20.09.2025/index.html')">cofnij sie w czasie do v0.6.7</button>
+                            </div>
+
+                            <div class="setInfo hidden">
+                                
+                                    <img class="infmini" src="/newhomev6/home2/assets/profi2.jpg">
+                                    <div class="infpane">
+                                        <a>strona autorstwa ognistego proska</a>
+                                        <br>
+                                        <i>bez jaj?</i>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <div class="helpwindow hidden">
+                <div class="helptbar">
+                    <a id="tbarnamehelp">pomoc</a>
+                    <div>
+                        <a class="winctrl" onclick="maxhelp()">☐</a>
+                        <a class="winctrl" onclick="closehelp()">✕</a>
+                    </div>
+                </div>
+                <pre>
+no siema
+gitara siema
+
+ja ci nic nie pomoge bracie
+gl
+                </pre>
+            </div>
+
+            <div class="kodwindow hidden">
+                <div class="kodtbar">
+                    <a id="tbarnamekod">kod podarunkowy</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="maxkod()">☐</a> -->
+                        <a class="winctrl" onclick="closekod()">✕</a>
+                    </div>
+                </div>
+
+                <a>podaj kod:</a>
+                <div class="center">
+                    <input id="kodpodarunkowy">
+                    <button id="kodpodok" onclick="kodck()">☑</button>
+                    <button id="kodpodnie" onclick="kodclear()">☒</button>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="iewindow hidden">
+                <div class="ietbar"><a id="tbarname">internet explorer</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <a class="winctrl" onclick="maxie()">☐</a>
+                        <a class="winctrl" onclick="closeie()">✕</a>
+                    </div>
+                </div>
+                <iframe src="" id="ieframe" tabindex="0"></iframe>
+            </div>
+
+            <div class="phwindow hidden">
+                <div class="phtbar"><a id="tbarnameph">placeholder</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxph()">☐</a> -->
+                        <a class="winctrl" onclick="closeph()">✕</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="serwindow hidden">
+                <div class="sertbar"><a id="tbarnameser">serwer</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxser()">☐</a> -->
+                        <a class="winctrl" onclick="closeser()">✕</a>
+                    </div>
+                </div>
+                <div class="sermain">
+                    <div class="panenoborder">
+                        <img class="serwmini" src="/newhomev6/home2/assets/sx3200.png">
+                        <a class="serwname">IBM system X 3200 M2</a>
+                        <button onclick="restart()">restart</button>
+                        <!-- <button>restart</button> -->
+                        <img class="sbadge" src="/newhomev6/home2/assets/sbadge.png">
+
+                    </div>
+
+                    <div class="panenoborder">
+                        <pre id="sipre">błąd (?)</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="infwindow hidden">
+                <div class="inftbar"><a id="tbarnameinf">informacje</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxph()">☐</a> -->
+                        <a class="winctrl" onclick="closeinf()">✕</a>
+                    </div>
+                </div>
+                <div class="infmain">
+
+                    <img class="infmini" src="/newhomev6/home2/assets/profi2.jpg">
+                    <div class="infpane">
+                        <a>strona autorstwa ognistego proska</a>
+                        <br>
+                        <i>bez jaj?</i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="potwindow hidden">
+                <div class="pottbar"><a id="tbarnamepot">dzban</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <a class="winctrl" onclick="maxpot()">☐</a>
+                        <a class="winctrl" onclick="closepot()">✕</a>
+                    </div>
+                </div>
+
+                <canvas id="potcanv"></canvas>
+            </div>
+
+            <div class="paswindow hidden">
+                <div class="pastbar"><a id="tbarnamepas">passwd</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxph()">☐</a> -->
+                        <!-- <a class="winctrl" onclick="closepas()">✕</a> -->
+                    </div>
+                </div>
+
+                <div class="pasmain">
+                    <div class="topshelf">
+                        <img src="/newhomev6/home2/assets/lock.ico">
+                        <a>podaj hasło:</a>
+
+                    </div>
+                    <div>
+                        <input type="password" autocomplete="off" id="passin">
+                        <button id='passy'>☑</button>
+                        <button id='passn'>☒</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warnwindow hidden">
+                <div class="warntbar"><a id="tbarnamewarn">warn</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxph()">☐</a> -->
+                        <a class="winctrl" onclick="closewarn()">✕</a>
+                    </div>
+                </div>
+
+                <div class="warnmain">
+                    <img src="/newhomev6/home2/assets/warn.ico">
+                    <a id="warntext"></a>
+
+                </div>
+            </div>
+
+            <div class="pingwindow hidden">
+                <div class="pingtbar"><a id="tbarnameping">ping</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxph()">☐</a> -->
+                        <a class="winctrl" onclick="closeping()">✕</a>
+                    </div>
+                </div>
+
+                <div class="pingmain">
+
+                    <div class="item">
+                        <img src="/newhomev6/home2/kompy/asus.png">
+
+                        <div>
+                            <a>Asus FX506</a>
+                            <br>
+                            <a style="font-family: monospace; font-size: 10px;">192.168.1.17 - <span
+                                    id="fx506stat"></span></a>
+                            <br>
+                            <button class="wolbtn" id="fx506wol" onclick="wake('fx506')">włącz</button>
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/newhomev6/home2/kompy/thinkped.png">
+
+                        <div>
+                            <a>thinkpad T480</a>
+                            <br>
+
+                            <a style="font-family: monospace; font-size: 10px;">192.168.1.56 - <span
+                                    id="t480stat"></span></a>
+                            <br>
+                            <button class="wolbtn" id="t480wol" onclick="wake('t480')">włącz</button>
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/newhomev6/home2/kompy/dell.png">
+
+                        <div>
+                            <a>Optiplex 790</a>
+                            <br>
+
+                            <a style="font-family: monospace; font-size: 10px;">192.168.1.21 - <span
+                                    id="ox790stat"></span></a>
+
+                            <br>
+                            <button class="wolbtn" id="ox790wol" onclick="wake('ox790')">włącz</button>
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="/newhomev6/home2/kompy/ps3.png">
+
+                        <div>
+                            <a>PS3</a>
+                            <br>
+
+                            <a style="font-family: monospace; font-size: 10px;">192.168.1.73 - <span
+                                    id="ps3stat"></span></a>
+
+                            <br>
+                            <button class="wolbtn bdisabled" id="ps3wol" onclick="wake('')">włącz</button>
+
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+
+            <div class="linkwindow hidden">
+                <div class="linktbar"><a id="tbarnamelink">link</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxph()">☐</a> -->
+                        <a class="winctrl" onclick="closelink()">✕</a>
+                    </div>
+                </div>
+
+                <div class="linkmain">
+                    <div class="icongrid">
+                        <!-- <div class="icon" data-func="openlink('https://firepro.edu.pl/fmus')">
+                            <img src="/newhomev6/img/fmuslogo.png">
+                            <a>Fmus</a>
+                        </div>
+
+                        <div class="icon" data-func="openlink('https://firepro.edu.pl/fdcpp45.zip')">
+                            <img src="/newhomev6/img/fdcpp.png">
+                            <a>Fdcpp</a>
+                        </div> -->
+
+                        <div class="icon" data-func="openlink('https://firepro.edu.pl/arch')">
+                            <img src="/newhomev6/img/nginx.png">
+                            <a>Archiwum</a>
+                        </div>
+
+                        <div class="icon" data-func="openlink('https://firepro.edu.pl/kotek')">
+                            <img src="/newhomev6/img/kot.png">
+                            <a>Kotek</a>
+                        </div>
+
+                        <div class="icon" data-func="openlink('https://firepro.edu.pl/classichome')">
+                            <img src="/newhomev6/home2/assets/globus.ico">
+                            <a>Old strona</a>
+                        </div>
+
+                        <div class="icon" data-func="openlink('http://firepro.edu.pl:8096')">
+                            <img src="/newhomev6/home2/icons/emby.png">
+                            <a>Emby</a>
+                        </div>
+
+                        <div class="icon" data-func="openlink('https://firepro.edu.pl/pliki')">
+                            <img src="/newhomev6/home2/icons/sftpgo.png">
+                            <a>Sftpgo</a>
+                        </div>
+
+
+
+                        <!-- <div class="icon" data-func="ph()">
+                            <img src="/newhomev6/img/placeholder.png">
+                            <a>placeholder</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="progwindow hidden">
+                <div class="progtbar"><a id="tbarnameprog">programy</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxph()">☐</a> -->
+                        <a class="winctrl" onclick="closeprog()">✕</a>
+                    </div>
+                </div>
+
+                <div class="progmain">
+                    <div class="icongrid">
+                        <div class="icon" data-func="openlink('https://firepro.edu.pl/fmus')">
+                            <img src="/newhomev6/img/fmuslogo.png">
+                            <a>Fmus</a>
+                        </div>
+
+                        <div class="icon" data-func="openlink('https://firepro.edu.pl/fdcpp45.zip')">
+                            <img src="/newhomev6/img/fdcpp.png">
+                            <a>Fdcpp</a>
+                        </div>
+
+                        <!-- <div class="icon" data-func="ph()">
+                            <img src="/newhomev6/img/placeholder.png">
+                            <a>placeholder</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="cmdwindow hidden">
+                <div class="cmdtbar"><a id="tbarnamecmd">wiersz poleceń</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <a class="winctrl" onclick="maxcmd()">☐</a>
+                        <a class="winctrl" onclick="closecmd()">✕</a>
+                    </div>
+                </div>
+
+                <div class="cmdLineSpace">
+
+                </div>
+            </div>
+
+            <div class="debugwindow hidden">
+                <div class="debugtbar"><a id="tbarnamedebug">DEBUG</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxph()">☐</a> -->
+                        <!-- <a class="winctrl" onclick="closedebug()">✕</a> -->
+                    <button onclick="toglDebug()">wyłącz</button>
+
+                    </div>
+                </div>
+
+                <div id="debugConsole"></div>
+                <div id="debugWins"></div>
+            </div>
+
+            <div class="winfnwindow hidden">
+                <div class="winfntbar"><a id="tbarnamewinfn">winfn</a>
+                    <div>
+                        <!-- <a class="winctrl" onclick="minie()">—</a> -->
+                        <!-- <a class="winctrl" onclick="maxph()">☐</a> -->
+                        <a class="winctrl" onclick="closewinfn()">✕</a>
+                    </div>
+                </div>
+
+            <div class="pasmain">
+                    <div class="topshelf">
+                        <img src="/newhomev6/home2/assets/lock.ico">
+                        <a>podaj login i hasło:</a>
+
+                    </div>
+                    <div>
+                        <input type="text" autocomplete="off" id="unamein" placeholder="login">
+                        <input type="password" autocomplete="off" id="passwdin" placeholder="hasło">
+                        <button id='winfnok'><a>☑</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="multiwindow hidden">
+                <div class="multitbar"><a id="tbarnamemulti">multiplayer</a>
+                    <div>
+                        <a class="winctrl" onclick="closemulti()">✕</a>
+                    </div>
+                </div>
+
+                <div class="multiList">
+
+                </div>
+            </div> -->
+
+
+
+
+
+
+            <div class="smenu hidden">
+                <div class="smenusidetext">
+                    <!-- https://firepro.edu.pl -->
+                     FireSoft Okna XD
+                </div>
+
+                <div class="smenuitems">
+                    <div class="padbox">
+                        <div class="smenunamespace">
+                            <div>
+                                <h3 id="smenuName"></h3>
+                            </div>
+                            <img src="/newhomev6/home2/assets/nopfp.png" class="proflink" id="smenuImg">
+
+                        </div>
+                    </div>
+
+                    <div class="smenuitem" onclick="ping()">
+                        <img src="/newhomev6/home2/assets/net.ico">
+                        <div>
+                            <h4>sieć</h4>
+                        </div>
+                    </div>
+
+                    <div class=" smenuitem" onclick="ser()">
+                        <img src="/newhomev6/home2/icons/eservmini.png">
+                        <div>
+                            <h4>serwer</h4>
+                        </div>
+                    </div>
+
+                    <!-- <div class="smenuitem" onclick="inf()">
+                        <img src="/newhomev6/home2/assets/info.ico">
+                        <div>
+                            <h4>informacje</h4>
+                        </div>
+                    </div> -->
+                    <div class="smenuitem" onclick="cmd()">
+                        <img src="/newhomev6/home2/assets/jawa.ico">
+                        <div>
+                            <h4>komenda</h4>
+                        </div>
+                    </div>
+
+                    <div class="smenuitem" onclick="set()">
+                        <img src="/newhomev6/home2/assets/set.ico">
+                        <div>
+                            <h4>ustawienia</h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="smenuitem" onclick="kod()">
+                        <img src="/newhomev6/home2/assets/lock.ico">
+                        <div>
+                            <h4>kod podarunkowy</h4>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="multiPanel hidden">
+                <div class="multiList">
+
+                </div>
+            </div>
+
+
+
+            <div class="icongrid">
+
+                <!-- <div class="icon" data-func="link()">
+                    <img src="/newhomev6/home2/assets/globuslupa.ico">
+                    <a>Linki</a>
+                </div> -->
+
+                <!-- <div class="icon" data-func="prog()">
+                    <img src="/newhomev6/home2/assets/prog1.ico">
+                    <a>Oprogramowanie</a>
+                </div> -->
+
+                <div class="icon" data-func="openlink('https://firepro.edu.pl/psi')">
+                    <img src="/newhomev6/home2/assets/files.ico">
+                    <a>PSI zadania</a>
+                </div>
+
+                <!-- <div class="icon" data-func="pot()">
+                    <img src="/newhomev6/home2/icons/pot.png">
+                    <a>Dzban</a>
+                </div> -->
+
+                <!-- <div class="icon" data-func="cmd()">
+                    <img src="/newhomev6/home2/assets/jawa.ico">
+                    <a>Komenda</a>
+                </div> -->
+
+                <div class="icon" data-func="openlink('https://github.com/Szczebrzeszyniec')">
+                    <img src="/newhomev6/img/github.png">
+                    <a>Github</a>
+                </div>
+
+                <div class="icon" data-func="openlink('https://steamcommunity.com//id/supersigmajestem')">
+                    <img src="/newhomev6/home2/icons/steamclassic.png">
+                    <a>Steam</a>
+                </div>
+
+                <div class="icon" data-func="openlink('https://www.youtube.com/@Szwistacz')">
+                    <img src="/newhomev6/home2/icons/ytclassic.png">
+                    <a>Youtube</a>
+                </div>
+
+                <div class="icon" data-func="openlink('https://t.me/Szczebrzeszyniec')">
+                    <img src="/newhomev6/home2/icons/telegramclassic.png">
+                    <a>Telegram</a>
+                </div>
+
+                <!-- <div class="icon" data-func="ph()">
+                    <img src="/newhomev6/img/placeholder.png">
+                    <a>placeholder</a>
+                </div> -->
+
+                <!-- <div class="icon" data-func="ie(https://firepro.edu.pl/newhomev6/home2/icons/tancez.gif)">
+                    <img src="/newhomev6/home2/icons/tancez.gif">
+                    <a>kot co tańczy</a>
+                </div> -->
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="taskbar">
+        <div class="startbd">
+            <button id="startb" onclick="toglstart()">
+                <a> <img src="/newhomev6/home2/assets/fajerLD.png" style="height: 16px; width: auto;">
+                    Start</a>
+            </button>
+        </div>
+
+        <div class="taskman">
+            <!-- <img id="ietbico" src="/newhomev6/home2/assets/ie.avif"> -->
+             <img id="cmdtbico" src="/newhomev6/home2/assets/jawa.ico">
+            <img id="linktbico" src="/newhomev6/home2/assets/globuslupa.ico">
+            <img id="progtbico" src="/newhomev6/home2/assets/prog1.ico">
+            <img id="ietbico" src="/newhomev6/home2/assets/globus.ico">
+            <img id="settbico" src="/newhomev6/home2/assets/set.ico">
+            <img id="kodtbico" src="/newhomev6/home2/assets/lock.ico">
+            <img id="helptbico" src="/newhomev6/home2/assets/help.ico">
+            <img id="sertbico" src="/newhomev6/home2/icons/eservmini.png">
+            <img id="pingtbico" src="/newhomev6/home2/assets/net.ico">
+            <img id="inftbico" src="/newhomev6/home2/assets/info.ico">
+            <img id="pottbico" src="/newhomev6/home2/icons/pot.png">
+            <img id="phtbico" src="/newhomev6/img/placeholder.png">
+        </div>
+        <div class="statbar">
+            <!-- <img src="/newhomev6/home2/assets/help.ico"> -->
+             <div  onclick="toglMultiPanel()">
+                <img class="statbarItem" src="/newhomev6/home2/assets/print.ico">
+                <a id="userCount"></a>
+             </div>
+            <!-- <img src="/newhomev6/home2/assets/novol.ico"> -->
+            <!-- <img src="/newhomev6/home2/assets/net.ico"> -->
+        </div>
+
+        <div class="tclock">
+            <a id="tct">zjebał sie</a>
+            <a id="tcd">zegarek</a>
+        </div>
+    </div>
+    </div>
+
+    <img id="cursor" src="/newhomev6/home2/assets/cursor.png" draggable="false">
+    <script src="/newhomev6/home2/script/debug.js"></script>
+
+    <script src="/newhomev6/home2/script/wm.js"></script>
+
+    <script src="/newhomev6/home2/script/fnet.js"></script>
+    <script src="/newhomev6/home2/script/node.js"></script>
+    <script src="/newhomev6/home2/script/sety.js"></script>
+    <script defer src="/newhomev6/home2/script/cmd.js"></script>
+    <script src="/newhomev6/home2/script/script.js"></script>
+    <script defer src="/newhomev6/home2/script/teapot.js"></script>
+
+</body>
+
+</html>

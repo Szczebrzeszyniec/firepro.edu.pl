@@ -1,0 +1,133 @@
+.setMain {
+    height: calc(100% - 18px);
+    width: 100%;
+    display: flex;
+}
+
+.setSide {
+    width: 140px;
+    background-color: #b6b6b6;
+    height: clac(100% - 8px);
+    border-right: 4px solid #fdffff;
+    /* border-bottom: 4px solid #fdffff; */
+    border-top: 4px solid #818181;
+    /* border-left: 4px solid #818181; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.setSide button {
+    /* margin-top: 4px; */
+    /* margin-bottom: 4px; */
+    margin: 4px;
+}
+
+.setOtherSide {
+    flex: 1;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.setWallsy {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.setEkran {
+    height: auto;
+    width: 100%;
+}
+
+.setEkranOpt {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 24px;
+    flex-direction: row;
+}
+
+#opt4by3 {
+    font-size: 18px;
+    height: 120px;
+    width: 160px;
+
+    margin-top: 18px;
+
+background-image: url("/newhomev6/home2/wall/zazu1.jpg");
+    color: white;
+
+    background-repeat: no-repeat;
+    /* background-attachment: local; */
+    background-clip: border-box;
+    background-size: 100% 100%;
+    background-color: #b6b6b6;
+        border-right: 8px solid #313131;
+    border-bottom: 8px solid #313131;
+    border-top: 8px solid #818181;
+    border-left: 8px solid #818181;
+}
+
+#opt16by9 {
+    font-size: 18px;
+    color: white;
+    height: 120px;
+    width: 214px;
+    
+    margin-top: 18px;
+
+
+    background-color: #b6b6b6;
+        border-right: 8px solid #313131;
+    border-bottom: 8px solid #313131;
+    border-top: 8px solid #818181;
+    border-left: 8px solid #818181;
+
+    background-image: url("/newhomev6/home2/wall/zazu1.jpg");
+    background-repeat: no-repeat;
+    /* background-attachment: local; */
+    background-clip: border-box;
+    background-size: 100% 100%;
+}
+.setInne {
+    height: auto;
+    width: 100%;
+}
+
+
+
+
+.setWallsy img {
+    width: 100px;
+    height: 100px;
+
+    border-right: 4px solid #fdffff;
+    border-bottom: 4px solid #fdffff;
+    border-top: 4px solid #818181;
+    border-left: 4px solid #818181;
+}
+
+.setInfo {
+    height: 100% ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    background-image: url(/newhomev6/home2/assets/fajer.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,23 @@
+.multiPanel {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    min-height: 120px;
+    max-height: 420px;
+    min-width: 100px;
+    max-width: 180px;
+
+    background-color: #c3c3c3;
+    border-top: 2px solid #fdffff;
+    border-right: 2px solid #fdffff;
+    border-left: 2px solid #818181;
+
+    z-index: 2137;
+}
+
+.multiPanel button {
+    width: 100%;
+    margin: 2px;
+    padding: 2px;
+    text-align: left;
+}
