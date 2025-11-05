@@ -56,7 +56,7 @@ function formatst(stats) {
 
 async function fetchSystemStats() {
     try {
-        const res = await fetch('https://firepro.edu.pl/fstat');
+        const res = await fetch('https://firepro.dev/fstat');
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 
@@ -73,7 +73,7 @@ async function wake(deviceName) {
     try {
         const password = await pas();
 
-        const res = await fetch('https://firepro.edu.pl/wol/', {
+        const res = await fetch('https://firepro.dev/wol/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ device: deviceName, password })
@@ -97,7 +97,7 @@ async function wake(deviceName) {
 async function restart() {
     const password = await pas();
     try {
-        const res = await fetch('https://firepro.edu.pl/restart/', {
+        const res = await fetch('https://firepro.dev/restart/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ password })
@@ -125,7 +125,7 @@ async function restart() {
 let lastData = null;
 
 async function pingnet() {
-    const url = 'https://firepro.edu.pl/ping/';
+    const url = 'https://firepro.dev/ping/';
     try {
         const res = await fetch(url, { cache: "no-store" });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -335,5 +335,5 @@ async function multiPlayer(baseUrl, pingMs = 5000, pollMs = 1000) {
 
 
 
-const client = multiPlayer('https://firepro.edu.pl/phonehome', 1000, 1000);
+const client = multiPlayer('https://firepro.dev/phonehome', 1000, 1000);
 

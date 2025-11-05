@@ -36,6 +36,7 @@ function prog() { openWindow('prog'); }
 function cmd() { openWindow('cmd');}
 function debug() { openWindow('debug');}
 function multi() { openWindow('multi');}
+function me() { openWindow('me');}
 
 function maxie() { toggleMaximize('.iewindow'); }
 function maxset() { toggleMaximize('.setwindow'); }
@@ -60,6 +61,7 @@ function closecmd() { closeWindow('.cmdwindow', cmd);}
 function closedebug() { closeWindow('.debugwindow', debug);}
 function closewinfn() { closeWindow('.winfnwindow'); }
 function closemulti() { closeWindow('.multiwindow'); }
+function closeme() { closeWindow('.mewindow'); }
 
 function pas() {
     return new Promise((resolve) => {
@@ -289,7 +291,7 @@ const windowConfigs = {
         titleSelector: '#tbarnameping',
         icon: ping,
         defaultTitle: 'Śieć - urządzenia',
-        size: { w: 280, h: 340 },
+        size: { w: 280, h: 370 },
         // position: { x: 0, y: 0 },
         center: true
     },
@@ -338,6 +340,15 @@ const windowConfigs = {
         // icon: ph,
         defaultTitle: 'multiplayer',
         size: { w: 420, h: 320 },
+        // position: { x: 0, y: 0 },
+        center: true
+    },
+        me: {
+        selector: '.mewindow',
+        titleSelector: '#tbarnameme',
+        // icon: ph,
+        defaultTitle: 'O mnie',
+        size: { w: 420, h: 430 },
         // position: { x: 0, y: 0 },
         center: true
     },

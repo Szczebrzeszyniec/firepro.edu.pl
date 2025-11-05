@@ -1,4 +1,4 @@
-const BASE_URL = 'https://net.firepro.edu.pl';
+const BASE_URL = 'https://net.firepro.dev';
 const STORAGE_KEY = 'fnetToken';
 
 async function saveToken(token, expiresIso = null) {

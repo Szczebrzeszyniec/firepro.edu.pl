@@ -1,0 +1,173 @@
+.meshelf {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.memain {
+    width: calc(100% - 20px);
+    height: calc(100% - 36px);
+    margin: 10px;
+}
+
+.metoL {
+    justify-content: flex-start;
+}
+.metoR {
+    justify-content: flex-end;
+}
+.meBetwn {
+    justify-content: space-between;
+}
+
+#meprofilowe {
+    width: 128px;
+    height: 128px;
+    margin-left: 4px;
+
+        border-bottom: 4px solid #fdffff;
+    border-right: 4px solid #fdffff;
+    border-left: 4px solid #818181;
+    border-top: 4px solid #818181;
+}
+.metext {
+    font-size: 18px;
+}
+.mebigtext {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.melink button {
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    line-height: normal;
+    vertical-align: middle;
+    min-height: 8px;
+    min-width: 8px;
+    background-color: #c3c3c3;
+    border-top: 2px solid #fdffff;
+    border-left: 2px solid #fdffff;
+    border-bottom: 2px solid #818181;
+    border-right: 2px solid #818181;
+    margin: 1px;
+}
+
+.melink button:active {
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #b6b6b6;
+    border-right: 2px solid #fdffff;
+    border-bottom: 2px solid #fdffff;
+    border-top: 2px solid #818181;
+    border-left: 2px solid #818181;
+}
+
+.melinkPreview button {
+    font-size: 18px;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    line-height: normal;
+    vertical-align: middle;
+    min-height: 8px;
+    min-width: 8px;
+    background-color: #c3c3c3;
+    border-top: 2px solid #fdffff;
+    border-left: 2px solid #fdffff;
+    border-bottom: 2px solid #818181;
+    border-right: 2px solid #818181;
+    margin: 1px;
+}
+.melinkPreview .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+.melinkPreview .image {
+    width: 109px;
+    height: 72px;
+
+    border-bottom: 4px solid #fdffff;
+    border-right: 4px solid #fdffff;
+    border-left: 4px solid #818181;
+    border-top: 4px solid #818181;
+
+    object-fit: contain;
+}
+
+.melinkPreview .image2 {
+    width: 101px;
+    height: 64px;
+    padding: 4px;
+
+            border-bottom: 4px solid #fdffff;
+    border-right: 4px solid #fdffff;
+    border-left: 4px solid #818181;
+    border-top: 4px solid #818181;
+
+    object-fit: contain;
+}
+
+.melinkPreview .text {
+    /* background-color: #b1b1b1; */
+    font-size: 18px;
+}
+
+.melinkPreview button:active {
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #b6b6b6;
+    border-right: 2px solid #fdffff;
+    border-bottom: 2px solid #fdffff;
+    border-top: 2px solid #818181;
+    border-left: 2px solid #818181;
+}
+
+.mepad {
+    padding: 4px;
+}
+
+.topek {
+    margin-bottom: 12px;
+}
+
+.botek {
+    margin-bottom: 12px;
+}
+
+.compatlist {
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    z-index: 22;
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: column;
+}
+
+.compatlist img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}

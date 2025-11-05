@@ -218,3 +218,45 @@
     height: clac(100% - 18px);
     width: 100%;
 }
+
+.mewindow {
+    background-color: #b6b6b6;
+    /* background-image: url(/newhomev6/home3/assets/fajer.gif); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    filter: drop-shadow(0 0 4px black);
+}
+
+.metbar {
+    height: 18px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #c3c3c3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 0 4px;
+    box-sizing: border-box;
+    border-top: 2px solid #fdffff;
+    border-left: 2px solid #fdffff;
+    border-right: 2px solid #818181;
+    border-bottom: 2px solid #818181;
+}
+
+.memenubar {
+    height: 18px;
+    width: 100%;
+    position: relative;
+    top: 20px;
+    background-color: #c3c3c3;
+    font-size: 12px;
+    padding: 0 4px;
+}
